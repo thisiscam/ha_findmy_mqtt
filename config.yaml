@@ -1,0 +1,14 @@
+anisette_server: # "http://localhost:6969"
+mqtt_broker:   # your HA broker name "greenwalnut.local"
+mqtt_username: # 
+mqtt_password: #
+mqtt_port: 1883
+polling_interval:  15 # how often to query the Apple server for reports, in minutes. Don't change less than 15, or you might get banned.
+ble_scan_interval: 40 # how long to actively scan for BLE signals 
+ble_scan_duration: 20 # wait between two BLE scans
+unseen_threshold:  60  # how long of a wait should a beacon be considered as unseen
+airtags:
+    - plist_path: "records/wilbur.plist" # path to a decrypted plist file
+          ha_mqtt_id: "airtag_wilbur"
+
+

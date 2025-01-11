@@ -1,0 +1,15 @@
+[Unit]
+Description=AirTag Tracker Service
+After=network.target
+
+[Service]
+ExecStart=/root/.venv/bin/python ble_scan.py config.yml
+WorkingDirectory=/root/ha_findmy_mqtt
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+RestartSec=1min
+
+[Install]
+WantedBy=multi-user.target

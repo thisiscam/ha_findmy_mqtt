@@ -1,0 +1,14 @@
+[Unit]
+Description=AirTag Tracker Service
+After=network.target
+
+[Service]
+ExecStart=/root/.venv/bin/python airtag_tracker.py config.yaml
+WorkingDirectory=/root/ha_findmy_mqtt
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
