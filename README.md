@@ -44,6 +44,16 @@ This setup has been tested with official Apple AirTags only. In theory, it shoul
 7. **Edit the `config.json` File:**  
    Modify `config.json` to match your MQTT configuration from the step above.  
 
+8. ** Test Run **
+```bash
+(venv) $ python airtag_tracker.py config.yaml # For GPS tracking
+```
+
+```bash
+(venv) $ python ble_scan.py config.yaml # For nearby BLE scanning
+```
+Both should run and periodically send tracking status to the MQTT tracker in your home assistant.  
+
 ---
 
 ## Systemd Service
